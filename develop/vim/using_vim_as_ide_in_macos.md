@@ -13,6 +13,8 @@
 
 - The Awesome: 包含大量有用的插件，以及配置。推荐使用
 
+> [The Ultimate vimrc](https://github.com/amix/vimrc)配置非常方便，并且支持多种语言环境，会根据语言类型提示你安装不同的插件
+
 # 安装Awesome版本
 
 ## 只作为个人使用
@@ -68,7 +70,15 @@ git pull --rebase
 
 ## 按键映射
 
-[leader](http://learnvimscriptthehardway.stevelosh.com/chapters/06.html#leader) 是 `,` ，很多功能都是通过 `<leader>` 来实现。例如，启用文件导航 [NERD Tree](https://github.com/scrooloose/nerdtree)
+[leader](http://learnvimscriptthehardway.stevelosh.com/chapters/06.html#leader) 是 `,` ，很多功能都是通过 `<leader>` 来实现。
+
+设置leader方法:
+
+```
+let mapleader = "-"
+```
+
+例如，启用文件导航 [NERD Tree](https://github.com/scrooloose/nerdtree)
 
 ```
 map <leader>nn :NERDTreeToggle<cr>
@@ -100,6 +110,17 @@ map <C-h> <C-W>h
 map <C-l> <C-W>l
 ```
 
+# 折叠
+
+默认开启了代码折叠功能，但是我觉得非常不好用，所以设置 `~/.vimrc` 默认关闭:
+
+```
+set foldlevelstart=99
+```
+
+> 有关折叠设置和使用，参考 [Vim 折叠](https://www.jianshu.com/p/16e0b822b682)
+
 # 参考
 
 * [macOS Setup Guide](https://sourabhbajaj.com/mac-setup/) 的 [vim](https://sourabhbajaj.com/mac-setup/Vim/) 章节
+* [Vim 折叠](https://www.jianshu.com/p/16e0b822b682)
